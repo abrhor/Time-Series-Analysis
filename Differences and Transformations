@@ -1,0 +1,10 @@
+import numpy as np
+import random
+import matplotlib.pyplot as plt
+
+t = random.sample([float(i) for i in range(50)], 40)
+d = np.diff(t) # method 1
+d1 = [j-i for i, j in zip(t, t[1:])] # method 2
+d2 = [x[n+1] - x[n] for x,n in enumerate(t)] # method 3
+
+print(d, d1)
