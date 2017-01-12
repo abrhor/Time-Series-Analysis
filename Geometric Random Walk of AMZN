@@ -1,9 +1,8 @@
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas
-import pandas.Series
 import quandl
-import math
+from math import exp
 
 AMZN = quandl.get("WIKI/AMZN")
 P = AMZN.loc[:, "Close"]
@@ -63,8 +62,8 @@ def model(loggeddata, alpha, forecast):
 for i in range(100):
   model(logptrend, alphacase, forecasts)
 
-realpredicton = math.exp(forecasts), 
-realforecastandtrend = math.exp(logptrend)
+realpredicton = exp(forecasts), 
+realforecastandtrend = exp(logptrend)
 
 datadict = {'Close': realprediction}
 
@@ -81,3 +80,7 @@ forecastclosing = pd.Dataframe(
 plt.plot(P, label='Historical', color='b')
 plt.plot(forecastclosing, label='Forecast', color='r')
 plt.legend(loc='upper left')
+plt.xlabel('Time')
+plt.ylabel('Price')
+plt.show()
+
