@@ -1,0 +1,46 @@
+import matplotlib.pyplot as plt
+import numpy as np
+import pandas
+import pandas.Series
+import quandl
+
+AMZN = quandl.get("WIKI/AMZN")
+P = AMZN.loc[:, "Close"]
+
+plt.plot(AMZN.loc[:, "Date"], AMZN.loc[:, "Close"], label='AMZN Closing Prices')
+plt.show()
+
+time = AMZN.index.values
+price_array = AMZN["Close"].tolist()
+price_array = np.array(price_array)
+
+""" 
+First-order difference - There is some deviation, but it's ok. Then we log it.
+Notice the trend reversal in 2001. Its a global min. Lets pick out our current 
+trend of growth and model that. This makes sense to use this as our predictor, 
+since this is the probably the beginning of rapid growth.
+"""
+
+diffp = np.diff(price_array)
+plt.plot(time[:-1], diffp) 
+print(np.nanmean(diffp), np.nanstd(diffp))
+logp = np.log(price_array)
+bottom = np.nanmin(logp)
+
+# This is tricky. Now that we have the max, slice our time array to isolate the bottom forward, which is positive growth/trend
+for t, price in zip(time, logp):
+  if price==bottom: # If it's the min, I now have attained the minimum timestamp
+    for i, ti in enumerate(time):
+      if ti==t: 
+      """
+      Take the time from the min, and get its index (which is the same 
+      in logp and time, would be more complicated if this was a difference)
+      Now I can isolate my time and my trend. Bottomtime is the same as trendstart
+      """
+        trendstart = time[i]
+        trendtime = time[i:]
+        logptrend = logp[i:]
+
+print(trendstart, trendtime)
+plt.plot(trendtime, logptrend)
+
