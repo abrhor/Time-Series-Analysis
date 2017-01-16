@@ -2,6 +2,8 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas
 import quandl
+from statsmodel.statsmodels.graphics.tsaplots import plot_acf
+
 from math import exp
 
 AMZN = quandl.get("WIKI/AMZN")
@@ -22,12 +24,18 @@ since this is the probably the beginning of rapid growth.
 """
 
 diffp = np.diff(price_array)
+
+plot_acf(diffp)
+plt.show()
+
 plt.plot(time[:-1], diffp) 
+plt.show()
+
 print(np.nanmean(diffp), np.nanstd(diffp))
 logp = np.log(price_array)
 bottom = np.nanmin(logp)
 
-# This is tricky. Now that we have the max, slice our time array to isolate the bottom forward, which is positive growth/trend
+# This is tricky. Now that we have the min, slice our time array to isolate the bottom forward, which is positive growth/trend
 for t, price in zip(time, logp):
   if price==bottom: # If it's the min, I now have attained the minimum timestamp
     for i, ti in enumerate(time):
@@ -43,6 +51,8 @@ for t, price in zip(time, logp):
 
 print(trendstart, trendtime)
 plt.plot(trendtime, logptrend)
+
+plot_acf(np.diff(logptrend))
 
 change = logptrend[len(logptrend)] - logptrend[0] # numerator
 indices = len(logptrend) - 1 # denominator
@@ -61,6 +71,14 @@ def model(loggeddata, alpha, forecast):
 # forecast for 100 days
 for i in range(100):
   model(logptrend, alphacase, forecasts)
+
+confidenceupper = np.array([])
+confidencelower = np.array([])
+
+def confidence(loggeddata, forecast):
+  standard_error = np.nanstd(loggeddata)
+  for i, price in enumerate(forecast):
+    np,a  
 
 realpredicton = exp(forecasts), 
 realforecastandtrend = exp(logptrend)
