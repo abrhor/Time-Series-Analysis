@@ -82,7 +82,7 @@ def confidence(loggeddata, forecast):
     l = price[i] - standard_error - sqrt(i+1)
     np.append(confidenceupper, u)
     np.append(confidencelower, l)
-    return confidenceu, confidencel
+
     
 confidenceupper, confidencelower = confidence(logptrend, forecasts)
       
