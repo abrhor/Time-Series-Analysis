@@ -9,7 +9,7 @@ AMZN = quandl.get("WIKI/AMZN")
 P = AMZN.loc[:, "Close"]
 AMZN['Index'] = range(len(AMZN.index.get_values()))
 
-plt.plot(AMZN.], AMZN.loc[:, "Close"], label='AMZN Closing Prices')
+plt.plot(AMZN.loc[:, "Close"], label='AMZN Closing Prices')
 plt.show()
 
 time = AMZN.index.values
