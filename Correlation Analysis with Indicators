@@ -1,0 +1,5 @@
+import numpy as np
+import talib as t
+import quandl
+import scipy.stats as S
+
