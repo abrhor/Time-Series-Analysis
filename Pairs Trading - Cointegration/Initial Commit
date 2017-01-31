@@ -1,0 +1,16 @@
+import numpy as np
+import matplotlib.pyplot as plt
+import pandas as pd
+import quandl
+
+gs = quandl.get("WIKI/GS").loc[:, "Close"].tolist()
+jpm = quandl.get("WIKI/JPM").loc[:, "Close"].tolist()
+
+loggs = np.diff(np.log(gs))
+logjpm = np.diff(np.log(jpm))
+
+print(np.corrcoef(loggs, logjpm[3876:]))
+>>> [[ 1.          0.68024855]
+     [ 0.68024855  1.        ]]
+     
+
