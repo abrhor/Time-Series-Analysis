@@ -7,8 +7,18 @@ from scipy import stats
 
 
 class Cointegrator(object):
-  def __init__(self, gs, jpm): # using these classic tickers instead of stock1 and stock2
-    self.gs = np.array(quandl.get("WIKI/" + gs).loc[:, "Close"].tolist())
+  def __init__(self, x, y): # using these classic tickers instead of stock1 and stock2
+    if x[-1] > y[-1]:
+      self.X = y
+      self.Y = x
+    else:
+      self.X = x
+      self.Y = y
+    if len(self.X) > len(self.Y):
+      self.X = self.X[-len(self.Y):]
+    else:
+      self.Y = self.Y[-len(self.X):]
+     self.gs = np.array(quandl.get("WIKI/" + gs).loc[:, "Close"].tolist())
     self.jpm = np.array(quandl.get("WIKI/" + jpm).loc[:, "Close"].tolist())
    
   def adf(self):
@@ -20,8 +30,7 @@ class Cointegrator(object):
       return False
   
   def engel_granger(self):
-    adf = self.adf()
-    if adf == True:
+    if self.adf() == True:
       if np.nanmean(self.gs) > np.nanmean(self.jpm)
       ws = stats.linregress([self.jpm, self.gs])[:2]
     else:    
