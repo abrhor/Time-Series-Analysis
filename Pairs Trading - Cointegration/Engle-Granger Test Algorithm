@@ -3,6 +3,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import quandl
 from statsmodels.tsa.stattools import adfuller
+from scipy import stats
 
 
 class Cointegrator(object):
@@ -10,7 +11,19 @@ class Cointegrator(object):
     self.gs = np.array(quandl.get("WIKI/" + gs).loc[:, "Close"].tolist())
     self.jpm = np.array(quandl.get("WIKI/" + jpm).loc[:, "Close"].tolist())
    
-  def dicker_fuller(self):
-    gs = adfuller(self.gs)
-    jpm = adfuller(self.jpm)
+  def adf(self):
+    gs = adfuller(self.gs)[1]
+    jpm = adfuller(self.jpm)[1]
+    if gs < .05 and jpm < .05:
+      return True
+    else:
+      return False
+  
+  def engel_granger(self):
+    adf = self.adf()
+    if adf == True:
+      if np.nanmean(self.gs) > np.nanmean(self.jpm)
+      ws = stats.linregress([self.jpm, self.gs])[:2]
+    else:    
+      ws = stats.linregress([self.gs, self.jpm])[:2]
     
