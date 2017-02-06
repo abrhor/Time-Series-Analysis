@@ -2,9 +2,15 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 import quandl
+from statsmodels.tsa.stattools import adfuller
+
 
 class Cointegrator(object):
   def __init__(self, gs, jpm): # using these classic tickers instead of stock1 and stock2
     self.gs = np.array(quandl.get("WIKI/" + gs).loc[:, "Close"].tolist())
     self.jpm = np.array(quandl.get("WIKI/" + jpm).loc[:, "Close"].tolist())
+   
+  def dicker_fuller(self):
+    gs = adfuller(self.gs)
+    jpm = adfuller(self.jpm)
     
