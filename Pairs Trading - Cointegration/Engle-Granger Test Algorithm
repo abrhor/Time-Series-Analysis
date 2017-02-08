@@ -9,17 +9,17 @@ from scipy import stats
 class Cointegrator(object):
   def __init__(self, x, y): # using these classic tickers instead of stock1 and stock2
     if x[-1] > y[-1]:
-      self.X = y
-      self.Y = x
+      self.X = np.array(quandl.get("WIKI/" + y).loc[:, "Close"].tolist())
+      self.Y = np.array(quandl.get("WIKI/" + x).loc[:, "Close"].tolist())
     else:
-      self.X = x
-      self.Y = y
+      self.X = np.array(quandl.get("WIKI/" + x).loc[:, "Close"].tolist())
+      self.Y = np.array(quandl.get("WIKI/" + y).loc[:, "Close"].tolist())
     if len(self.X) > len(self.Y):
       self.X = self.X[-len(self.Y):]
     else:
       self.Y = self.Y[-len(self.X):]
-     self.gs = np.array(quandl.get("WIKI/" + gs).loc[:, "Close"].tolist())
-    self.jpm = np.array(quandl.get("WIKI/" + jpm).loc[:, "Close"].tolist())
+    self.diffX, self.diffY = np.diff(self.X), np.diff(self.Y)
+     
    
   def adf(self):
     gs = adfuller(self.gs)[1]
