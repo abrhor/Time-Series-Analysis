@@ -22,16 +22,18 @@ class Cointegrator(object):
      
    
   def adf(self):
-    gs = adfuller(self.gs)[1]
-    jpm = adfuller(self.jpm)[1]
-    if gs < .05 and jpm < .05:
+    X = adfuller(self.diffX)[1]
+    Y = adfuller(self.diffY)[1]
+    if X < .05 and Y < .05:
       return True
     else:
       return False
   
   def engel_granger(self):
-    if self.adf() == True:
-      if np.nanmean(self.gs) > np.nanmean(self.jpm)
+    adf = self.adf()
+    if adf:
+      if np.nanmean(self.diffX) > np.nanmean(self.diffY):
+        
       ws = stats.linregress([self.jpm, self.gs])[:2]
     else:    
       ws = stats.linregress([self.gs, self.jpm])[:2]
