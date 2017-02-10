@@ -2,8 +2,7 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 import quandl
-from statsmodels.tsa.stattools import adfuller
-from scipy import stats
+import statsmodel.api as sm
 
 
 class Cointegrator(object):
@@ -22,8 +21,8 @@ class Cointegrator(object):
      
    
   def adf(self):
-    X = adfuller(self.diffX)[1]
-    Y = adfuller(self.diffY)[1]
+    X = sm.adfuller(self.diffX)[1]
+    Y = sm.adfuller(self.diffY)[1]
     if X < .05 and Y < .05:
       return True
     else:
@@ -32,9 +31,17 @@ class Cointegrator(object):
   def engel_granger(self):
     adf = self.adf()
     if adf:
-      if np.nanmean(self.diffX) > np.nanmean(self.diffY):
-        
-      ws = stats.linregress([self.jpm, self.gs])[:2]
-    else:    
-      ws = stats.linregress([self.gs, self.jpm])[:2]
+        def process(small, large):
+          modelX = sm.add_constant(small)
+          model = sm.OLS(large, modelX)
+          results = model.fit()
+          ws = results.params
+          yhat = small * ws[1] + ws[0]
+          residuals = large - yhat
+          resid = sm.adfuller(residuals)
+          if resid[1] > .05
+            self.cointegrated = False
+          
+        if np.nanmean(self.diffY) > np.nanmean(self.diffX):  
+    
     
