@@ -37,7 +37,7 @@ class Cointegrator(object):
         else:
           small = self.diffX
           large = self.diffY
-        def test(small=small, large=large):
+        def test(small, large):
           modelX = sm.add_constant(small)
           model = sm.OLS(large, modelX)
           results = model.fit()
@@ -48,7 +48,12 @@ class Cointegrator(object):
           if resid[1] > .05
             self.cointegrated = False
           else:
-            self.cointegrated = True
+            cointegrated = True
+          return cointegrated
+      try:
+        return test(small=small, large=large)
+      except NameError:
+        return("Equities Not Integrated of Order 1"
           
     
     
