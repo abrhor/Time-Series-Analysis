@@ -31,7 +31,13 @@ class Cointegrator(object):
   def engel_granger(self):
     adf = self.adf()
     if adf:
-        def process(small, large):
+        if self.diffX[-1] > self.diffY[-1]:
+          small = self.diffY
+          large = self.diffX
+        else:
+          small = self.diffX
+          large = self.diffY
+        def test(small=small, large=large):
           modelX = sm.add_constant(small)
           model = sm.OLS(large, modelX)
           results = model.fit()
@@ -41,7 +47,8 @@ class Cointegrator(object):
           resid = sm.adfuller(residuals)
           if resid[1] > .05
             self.cointegrated = False
+          else:
+            self.cointegrated = True
           
-        if np.nanmean(self.diffY) > np.nanmean(self.diffX):  
     
     
