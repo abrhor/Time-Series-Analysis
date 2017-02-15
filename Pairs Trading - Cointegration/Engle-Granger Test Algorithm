@@ -51,9 +51,9 @@ class Cointegrator(object):
             cointegrated = True
           return cointegrated
       try:
-        return test(small=small, large=large)
+        return test(small, large)
       except NameError:
-        return("Equities Not Integrated of Order 1"
+        return "Equities Not Integrated of Order 1"
           
     
     
