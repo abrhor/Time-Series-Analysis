@@ -1,0 +1,360 @@
+Last login: Wed Mar  1 18:36:28 on console
+AbrahamwitzsAir:~ student$ python
+Python 3.5.2 |Anaconda 4.2.0 (x86_64)| (default, Jul  2 2016, 17:52:12) 
+[GCC 4.2.1 Compatible Apple LLVM 4.2 (clang-425.0.28)] on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import numpy as np
+>>> import matplotlib.pyplot as plt
+>>> x = np.arange(100)
+>>> x=y
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'y' is not defined
+>>> y = x * 2
+>>> plt.plot(x,y)
+[<matplotlib.lines.Line2D object at 0x1071bc518>]
+>>> plt.show()
+>>> noise = np.random.normal(0, 4, 100)
+>>> y = noise + y
+>>> plt.plot(x,y)
+[<matplotlib.lines.Line2D object at 0x109e62a90>]
+>>> plt.show)
+  File "<stdin>", line 1
+    plt.show)
+            ^
+SyntaxError: invalid syntax
+>>> plt.show()
+>>> import pandas as pd
+>>> rolling_mue = pd.rolling_mean(y)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: f() missing 1 required positional argument: 'window'
+>>> def rolling_mean(xs):
+...     x = []
+...     for i in xs:
+...             x.append(np.nanmean(xs[:i]))
+...     return np.array(x)
+... 
+>>> rolling_mue = rolling_mean(y)
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+>>> y = np.array([float(x) for x in y])
+>>> rolling_mue = rolling_mean(y)
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+__main__:4: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+>>> def f(xs)
+  File "<stdin>", line 1
+    def f(xs)
+            ^
+SyntaxError: invalid syntax
+>>> def compute(xs):
+...     out = []
+...     for i in xrange(100):
+...             out.append(np.nanmean(xs[:i]))
+...     return np.array(out)
+... 
+>>> rol = compute(y)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "<stdin>", line 3, in compute
+NameError: name 'xrange' is not defined
+>>> def compute(xs):
+...     out = []
+...     for i in range(100):
+...             out.append(np.nanmean(xs[:i]))
+...     return np.array(out)
+... 
+>>> rol = compute(y)
+/Users/student/anaconda/lib/python3.5/site-packages/numpy/lib/nanfunctions.py:703: RuntimeWarning: Mean of empty slice
+  warnings.warn("Mean of empty slice", RuntimeWarning)
+>>> def compute(xs):
+...     out = [xs[0]]
+...     for i in range(100):
+...             out.append(npw
+... w
+  File "<stdin>", line 5
+    w
+    ^
+SyntaxError: invalid syntax
+>>> def comp(xs):
+...     out = [xs[0]]
+...     for i in range(1,101ww
+  File "<stdin>", line 3
+    for i in range(1,101ww
+                         ^
+SyntaxError: invalid syntax
+>>> def f(xs):
+...     out = []
+...     for i in range(1,101):
+...             out.append(np.nanmean(xs[:i]))
+...     return np.array(out)
+... 
+>>> print(f(y))
+[ -2.22537595   1.79375473   2.87017425   3.18333052   4.30935999
+   5.20754728   6.49364153   7.71901392   9.437448    11.1522487
+  11.3918508   12.8590572   13.91424878  14.48506555  15.4909492
+  15.89523635  16.58365003  17.515055    18.37161945  19.43844984
+  20.04727238  21.0506913   22.2833216   23.14934391  24.18732741
+  25.35136743  26.13995242  27.2201782   28.30791039  29.39046055
+  30.60984069  31.71840008  32.65303516  33.61312694  34.61484747
+  35.54242057  36.68045088  37.6433853   38.68742714  39.7788735
+  40.88787159  41.93897407  42.89149213  43.72529567  44.75893711
+  45.58926505  46.5667288   47.45701694  48.51917061  49.58718589
+  50.67897408  51.5850815   52.70793368  53.58201138  54.53632253
+  55.5609658   56.58452761  57.51716506  58.45929522  59.56014563
+  60.59125733  61.53676703  62.43999098  63.49387721  64.51074864
+  65.49968637  66.57866712  67.47604011  68.48422987  69.52304314
+  70.55322835  71.57904803  72.51849203  73.5058488   74.52783965
+  75.52839249  76.5623076   77.55659926  78.52959119  79.4862286
+  80.45053633  81.41070146  82.28593508  83.21883417  84.21007548
+  85.14532872  86.11593516  87.04433391  88.07711331  89.06167993
+  89.9804643   90.94562102  91.95538881  92.97187911  94.01635076
+  94.96260683  95.94780896  96.9610652   97.95647236  98.91962886]
+>>> print(len(y), len(f(y)))
+100 100
+>>> mue = f(y)
+>>> plt.plot(x,y)
+[<matplotlib.lines.Line2D object at 0x116bc9358>]
+>>> plt.plot(x,mue, c='r')
+[<matplotlib.lines.Line2D object at 0x109e3a668>]
+>>> plt.show()
+>>> newy = y-mue
+>>> plt.plot(x,newy)
+[<matplotlib.lines.Line2D object at 0x116d2b860>]
+>>> plt.plot(x,mue,c='r')
+[<matplotlib.lines.Line2D object at 0x116d2bac8>]
+>>> plt.show()
+>>> newy2 = newy - mue
+>>> plt.plot(x,newy2)
+[<matplotlib.lines.Line2D object at 0x116d94ba8>]
+>>> plt.show()
+>>> other = y - np.nanmean(y)
+>>> plt.plot(x,other)
+[<matplotlib.lines.Line2D object at 0x109e62ba8>]
+>>> plt.show()
+>>> other = other - f(other)
+>>> plt.plot(x,other)
+[<matplotlib.lines.Line2D object at 0x104b977b8>]
+>>> plt.show()
+>>> plt.plot(x,np.diff(other))
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/Users/student/anaconda/lib/python3.5/site-packages/matplotlib/pyplot.py", line 3161, in plot
+    ret = ax.plot(*args, **kwargs)
+  File "/Users/student/anaconda/lib/python3.5/site-packages/matplotlib/__init__.py", line 1819, in inner
+    return func(ax, *args, **kwargs)
+  File "/Users/student/anaconda/lib/python3.5/site-packages/matplotlib/axes/_axes.py", line 1382, in plot
+    for line in self._get_lines(*args, **kwargs):
+  File "/Users/student/anaconda/lib/python3.5/site-packages/matplotlib/axes/_base.py", line 381, in _grab_next_args
+    for seg in self._plot_args(remaining, kwargs):
+  File "/Users/student/anaconda/lib/python3.5/site-packages/matplotlib/axes/_base.py", line 359, in _plot_args
+    x, y = self._xy_from_xy(x, y)
+  File "/Users/student/anaconda/lib/python3.5/site-packages/matplotlib/axes/_base.py", line 219, in _xy_from_xy
+    raise ValueError("x and y must have same first dimension")
+ValueError: x and y must have same first dimension
+>>> plt.plot(x[1:], np.diff(other))
+[<matplotlib.lines.Line2D object at 0x1071a64e0>]
+>>> plt.show()
+>>> diffy = np.diff(y)
+>>> rol = f(diffy)
+>>> new = diffy - np.nanmean(y)
+>>> plt.plot(x[1:],new)
+[<matplotlib.lines.Line2D object at 0x116e216a0>]
+>>> plt.show()
+
