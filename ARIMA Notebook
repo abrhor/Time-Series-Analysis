@@ -1,10 +1,10 @@
 ```python
 import numpy as np
->>> import pandas as pd
->>> import matplotlib.pyplot as plt
->>> from statsmodels.graphics.tsaplots import plot_acf
->>> import statsmodels.api as sm
->>> import quandl
+import pandas as pd
+import matplotlib.pyplot as plt
+from statsmodels.graphics.tsaplots import plot_acf
+import statsmodels.api as sm
+import quandl
 >>> ibm = quandl.get("WIKI/IBM").loc[:, "Close"].tolist()
 >>> ibm = np.array(ibm)
 >>> print(len(ibm))
